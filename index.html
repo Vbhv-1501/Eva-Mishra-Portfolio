@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eva Mishra — Hindustani Classical Vocalist & Music Educator</title>
+  <meta name="description" content="Eva Mishra — UGC NET Qualified Musician, Hindustani Classical Vocalist, and Aspiring Assistant Professor. Where melodies become emotions.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=Great+Vibes&family=Parisienne&family=Allura&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blush: { 50: '#fef5f7', 100: '#fde8ee', 200: '#fbd0de', 300: '#f8a9c5', 400: '#f27aa8', 500: '#e84d86' },
+            rose: { 50: '#fff2f4', 100: '#fce4e8', 200: '#f9cdd5', 300: '#f3a4b5', 400: '#e8708e', 500: '#d64a73' },
+            dusty: { 50: '#faf5f3', 100: '#f3e8e3', 200: '#e8d1c7', 300: '#d4afa0', 400: '#be8d7a', 500: '#a87461' },
+            peach: { 50: '#fef8f5', 100: '#fdeadc', 200: '#fbd2b8', 300: '#f5b08a', 400: '#e88d5c' },
+            mauve: { 50: '#f9f5f8', 100: '#f0e4ef', 200: '#e2c9df', 300: '#cea0ca', 400: '#b377b0', 500: '#985f96' },
+            ivory: { 50: '#fefdfb', 100: '#fdf9f3', 200: '#faf0e4', 300: '#f5e3cf' },
+            nude: { 50: '#faf7f5', 100: '#f2ebe6', 200: '#e5d5cb', 300: '#d4b9a8', 400: '#c19d86' },
+            warm: { 50: '#faf7f5', 100: '#f5efe8', 200: '#ebe0d3', 300: '#dccbb7', 400: '#c9b198', 500: '#b39a7d' },
+            charcoal: { 50: '#f8f6f5', 100: '#ede9e7', 200: '#d9d2cd', 300: '#bfb4ac', 400: '#a29489', 500: '#8a7b6e', 600: '#6e6258', 700: '#524b44', 800: '#3a3530', 900: '#1e1c1a' }
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            heading: ['"Playfair Display"', 'serif'],
+            body: ['"Inter"', 'sans-serif'],
+            script: ['"Great Vibes"', 'cursive'],
+            parisienne: ['"Parisienne"', 'cursive'],
+            allura: ['"Allura"', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #fefdfb; color: #3a3530; overflow-x: hidden; }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #fdf9f3; }
+    ::-webkit-scrollbar-thumb { background: #e2c9df; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #b377b0; }
+
+    /* Floating Music Notes */
+    @keyframes floatNote1 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.15; }
+      25% { transform: translate(15px, -20px) rotate(10deg); opacity: 0.25; }
+      50% { transform: translate(-10px, -35px) rotate(-5deg); opacity: 0.18; }
+      75% { transform: translate(20px, -15px) rotate(8deg); opacity: 0.22; }
+    }
+    @keyframes floatNote2 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.12; }
+      33% { transform: translate(-20px, -25px) rotate(-12deg); opacity: 0.2; }
+      66% { transform: translate(15px, -40px) rotate(8deg); opacity: 0.15; }
+    }
+    @keyframes floatNote3 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.1; }
+      50% { transform: translate(25px, -30px) rotate(15deg); opacity: 0.2; }
+    }
+    .float-note-1 { animation: floatNote1 8s ease-in-out infinite; }
+    .float-note-2 { animation: floatNote2 11s ease-in-out infinite; }
+    .float-note-3 { animation: floatNote3 14s ease-in-out infinite; }
+    .float-note-4 { animation: floatNote1 10s ease-in-out infinite 2s; }
+    .float-note-5 { animation: floatNote2 13s ease-in-out infinite 3s; }
+    .float-note-6 { animation: floatNote3 9s ease-in-out infinite 1s; }
+
+    /* Treble Clef Slow Rotation */
+    @keyframes slowSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .slow-spin { animation: slowSpin 60s linear infinite; }
+
+    /* Soundwave pulse */
+    @keyframes soundwave {
+      0%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(1.6); }
+    }
+    .soundwave-bar {
+      animation: soundwave 1.5s ease-in-out infinite;
+    }
+
+    /* Reveal Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.12s; }
+    .reveal-delay-2 { transition-delay: 0.24s; }
+    .reveal-delay-3 { transition-delay: 0.36s; }
+    .reveal-delay-4 { transition-delay: 0.48s; }
+    .reveal-delay-5 { transition-delay: 0.6s; }
+    .reveal-delay-6 { transition-delay: 0.72s; }
+
+    .stagger-children .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .stagger-children .reveal:nth-child(2) { transition-delay: 0.12s; }
+    .stagger-children .reveal:nth-child(3) { transition-delay: 0.19s; }
+    .stagger-children .reveal:nth-child(4) { transition-delay: 0.26s; }
+    .stagger-children .reveal:nth-child(5) { transition-delay: 0.33s; }
+    .stagger-children .reveal:nth-child(6) { transition-delay: 0.4s; }
+
+    /* Image Reveal */
+    .img-reveal {
+      position: relative;
+      overflow: hidden;
+    }
+    .img-reveal::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: #fdf9f3;
+      transform-origin: right;
+      transform: scaleX(1);
+      transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+    .img-reveal.visible::after {
+      transform: scaleX(0);
+    }
+
+    /* Grain overlay */
+    .grain::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.5;
+    }
+
+    /* Nav */
+    .nav-link {
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #d64a73;
+      border-radius: 1px;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+    .nav-link.active::after,
+    .nav-link:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* Link underline */
+    .link-underline {
+      position: relative;
+      display: inline-block;
+    }
+    .link-underline::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .link-underline:hover::after { width: 100%; }
+
+    /* Floating label form */
+    .float-label { position: relative; }
+    .float-label input,
+    .float-label textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #d9d2cd;
+      padding: 1.2rem 0 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: #3a3530;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+    .float-label input:focus,
+    .float-label textarea:focus { border-bottom-color: #d64a73; }
+    .float-label label {
+      position: absolute;
+      top: 1.2rem;
+      left: 0;
+      font-size: 0.95rem;
+      color: #a29489;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    .float-label input:focus ~ label,
+    .float-label input:not(:placeholder-shown) ~ label,
+    .float-label textarea:focus ~ label,
+    .float-label textarea:not(:placeholder-shown) ~ label {
+      top: -0.2rem;
+      font-size: 0.72rem;
+      color: #d64a73;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* Pill */
+    .pill {
+      display: inline-block;
+      padding: 0.4rem 1.1rem;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: all 0.3s ease;
+    }
+    .pill:hover { transform: scale(1.05); }
+
+    /* Card lift */
+    .card-lift {
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .card-lift:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(214, 74, 115, 0.08);
+    }
+
+    /* Music divider */
+    .music-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1.5rem 0;
+      color: #e2c9df;
+    }
+    .music-divider::before,
+    .music-divider::after {
+      content: '';
+      height: 1px;
+      width: 80px;
+      background: linear-gradient(to right, transparent, #e2c9df, transparent);
+    }
+
+    /* Timeline connector */
+    .timeline-line {
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, #f3e4ef, #e2c9df, #f3e4ef);
+    }
+
+    /* Sheet music pattern */
+    .sheet-music-lines {
+      background-image: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 11px,
+        rgba(226, 201, 223, 0.15) 11px,
+        rgba(226, 201, 223, 0.15) 12px
+      );
+    }
+
+    /* Mobile nav */
+    .mobile-nav {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .mobile-nav.open { transform: translateX(0); }
+
+    /* Ornamental Border for Portrait */
+    .portrait-frame {
+      position: relative;
+    }
+    .portrait-frame::before {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border: 1px solid rgba(226, 201, 223, 0.4);
+      border-radius: 2rem;
+      pointer-events: none;
+    }
+    .portrait-frame::after {
+      content: '';
+      position: absolute;
+      inset: -24px;
+      border: 1px dashed rgba(226, 201, 223, 0.25);
+      border-radius: 2.5rem;
+      pointer-events: none;
+    }
+
+    /* Section number */
+    .section-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: #bfb4ac;
+      text-transform: uppercase;
+    }
+
+    /* Testimonial carousel */
+    .testimonial-slide {
+      min-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .portrait-frame::before { inset: -8px; }
+      .portrait-frame::after { inset: -16px; }
+    }
+  </style>
+</head>
+<body class="grain">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-6xl mx-auto px-6 md:px-10 flex items-center justify-between h-20">
+      <a href="#hero" class="font-heading text-xl md:text-2xl font-semibold tracking-tight text-charcoal-800 hover:text-rose-500 transition-colors">
+        Eva<span class="text-blush-400">.</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#about" class="nav-link text-sm font-medium text-charcoal-400 hover:text-charcoal-800 transition-colors">About</a>
+        <a href="#education" class="nav-link text-sm font-medium text-charcoal-400 hover:text-charcoal-800 transition-colors">Education</a>
+        <a href="#passion" class="nav-link text-sm font-medium text-charcoal-400 hover:text-charcoal-800 transition-colors">Passion</a>
+        <a href="#connect" class="nav-link text-sm font-medium text-charcoal-400 hover:text-charcoal-800 transition-colors">Connect</a>
+        <a href="#contact" class="ml-4 px-6 py-2.5 bg-rose-500 text-white text-sm font-medium rounded-full hover:bg-blush-500 transition-all duration-300 hover:shadow-lg hover:shadow-blush-200">
+          Contact Me
+        </a>
+      </div>
+      <button id="menuBtn" class="md:hidden w-10 h-10 flex items-center justify-center text-charcoal-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div id="mobileNav" class="mobile-nav fixed inset-0 z-[60] bg-ivory-50 flex flex-col justify-center items-center gap-8">
+    <button id="closeMenu" class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center text-charcoal-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <a href="#about" class="mobile-link font-display text-4xl text-charcoal-700 hover:text-rose-500 transition-colors">About</a>
+    <a href="#education" class="mobile-link font-display text-4xl text-charcoal-700 hover:text-rose-500 transition-colors">Education</a>
+    <a href="#passion" class="mobile-link font-display text-4xl text-charcoal-700 hover:text-rose-500 transition-colors">Passion</a>
+    <a href="#connect" class="mobile-link font-display text-4xl text-charcoal-700 hover:text-rose-500 transition-colors">Connect</a>
+    <a href="#contact" class="mobile-link font-display text-4xl text-charcoal-700 hover:text-rose-500 transition-colors">Contact</a>
+  </div>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-ivory-50">
+    <!-- Floating Music Elements -->
+    <div class="absolute top-[12%] left-[8%] text-blush-300/20 text-4xl float-note-1 select-none pointer-events-none">♩</div>
+    <div class="absolute top-[20%] right-[12%] text-mauve-200/20 text-5xl float-note-2 select-none pointer-events-none">♪</div>
+    <div class="absolute top-[60%] left-[5%] text-rose-200/15 text-3xl float-note-3 select-none pointer-events-none">♫</div>
+    <div class="absolute top-[70%] right-[8%] text-blush-200/15 text-4xl float-note-4 select-none pointer-events-none">♬</div>
+    <div class="absolute top-[40%] left-[15%] text-mauve-100/15 text-2xl float-note-5 select-none pointer-events-none">♩</div>
+    <div class="absolute bottom-[15%] right-[20%] text-dusty-200/15 text-3xl float-note-6 select-none pointer-events-none">♪</div>
+
+    <!-- Decorative Treble Clef -->
+    <div class="absolute -right-[5%] top-[10%] text-blush-100/30 text-[18rem] font-display slow-spin select-none pointer-events-none leading-none">𝄞</div>
+
+    <!-- Sheet Music Lines (subtle) -->
+    <div class="absolute top-0 left-0 right-0 bottom-0 sheet-music-lines opacity-40 pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-6 md:px-10 w-full pt-28 pb-16 relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <!-- Text Side -->
+        <div class="order-2 md:order-1">
+          <div class="reveal">
+            <span class="section-num">Hindustani Classical Vocalist</span>
+          </div>
+          <h1 class="reveal reveal-delay-1 font-display text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-light text-charcoal-800 leading-[1.05] mt-5">
+            Eva<br>
+            <span class="font-medium italic text-rose-500">Mishra</span>
+          </h1>
+          <div class="reveal reveal-delay-2 mt-4">
+            <p class="text-charcoal-400 text-sm tracking-widest uppercase font-medium">UGC NET Qualified (Music)</p>
+            <p class="text-charcoal-300 text-sm mt-1 font-light">Aspiring Assistant Professor | Hindustani Classical Vocalist</p>
+          </div>
+          <p class="reveal reveal-delay-2 font-script text-2xl md:text-3xl text-blush-400 mt-5">
+            Where melodies become emotions
+          </p>
+          <p class="reveal reveal-delay-3 mt-6 text-charcoal-400 text-base md:text-lg font-light leading-relaxed max-w-md">
+            Rooted in the rich traditions of Hindustani Classical Music, I aspire to inspire through teaching, performing, and preserving the soulful heritage of Indian ragas.
+          </p>
+          <div class="reveal reveal-delay-4 flex flex-wrap items-center gap-4 mt-8 md:mt-10">
+            <a href="#about" class="group inline-flex items-center gap-2 px-7 py-3.5 bg-rose-500 text-white rounded-full text-sm font-medium hover:bg-blush-500 transition-all duration-300 hover:shadow-lg hover:shadow-blush-200">
+              Explore My Journey
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"/></svg>
+            </a>
+            <a href="#contact" class="group inline-flex items-center gap-2 px-7 py-3.5 border border-charcoal-200 text-charcoal-600 rounded-full text-sm font-medium hover:border-rose-300 hover:text-rose-500 transition-all duration-300">
+              Contact Me
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25l-4.9三 4.9三M21 8.25l-4.9三-4.9三M21 8.25H3"/></svg>
+            </a>
+          </div>
+
+          <!-- Mini Soundwave -->
+          <div class="reveal reveal-delay-5 flex items-center gap-6 mt-12 pt-8 border-t border-charcoal-100/60">
+            <div class="flex items-end gap-[3px]">
+              <div class="w-[3px] h-3 bg-blush-300 rounded-full soundwave-bar" style="animation-delay: 0s;"></div>
+              <div class="w-[3px] h-5 bg-blush-400 rounded-full soundwave-bar" style="animation-delay: 0.15s;"></div>
+              <div class="w-[3px] h-8 bg-rose-400 rounded-full soundwave-bar" style="animation-delay: 0.3s;"></div>
+              <div class="w-[3px] h-5 bg-blush-400 rounded-full soundwave-bar" style="animation-delay: 0.45s;"></div>
+              <div class="w-[3px] h-3 bg-blush-300 rounded-full soundwave-bar" style="animation-delay: 0.6s;"></div>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-charcoal-600">Currently seeking</p>
+              <p class="text-xs text-charcoal-400 mt-0.5">Teaching opportunities in Music</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portrait Side -->
+        <div class="order-1 md:order-2 flex justify-center md:justify-end">
+          <div class="relative">
+            <div class="reveal reveal-delay-2 portrait-frame">
+              <div class="img-reveal rounded-[2rem] overflow-hidden">
+                <img src="Eva1.png" alt="Eva Mishra — Hindustani Classical Vocalist" class="w-[300px] md:w-[380px] lg:w-[420px] aspect-[3/4] object-cover">
+              </div>
+            </div>
+            <!-- Floating Badge -->
+            <div class="reveal reveal-delay-4 absolute -bottom-4 -left-4 md:-left-8 bg-white/95 backdrop-blur-md rounded-2xl px-5 py-4 shadow-lg shadow-rose-100/30">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-blush-50 flex items-center justify-center">
+                  <span class="text-blush-400 text-lg">♪</span>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-charcoal-800">UGC NET Qualified</p>
+                  <p class="text-xs text-charcoal-400">Music • Bhatkhande Alumni</p>
+                </div>
+              </div>
+            </div>
+            <!-- Swar annotation -->
+            <div class="reveal reveal-delay-5 absolute -top-3 -right-3 font-parisienne text-blush-300/60 text-lg bg-white/80 px-3 py-1 rounded-xl backdrop-blur-sm select-none">
+              ♪ Sa Re Ga Ma Pa
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 reveal">
+      <span class="text-[10px] text-charcoal-300 tracking-[0.2em] uppercase">Scroll</span>
+      <div class="w-px h-8 bg-gradient-to-b from-blush-200 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- ==================== MARQUEE STRIP ==================== -->
+  <div class="bg-charcoal-800 py-4 overflow-hidden">
+    <div class="flex items-center gap-8 whitespace-nowrap" style="animation: marquee 35s linear infinite;" id="marqueeTrack">
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">Hindustani Classical</span>
+      <span class="text-blush-400">✦</span>
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">Vocal Performance</span>
+      <span class="text-blush-400">✦</span>
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">Music Education</span>
+      <span class="text-blush-400">✦</span>
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">Raga & Taal</span>
+      <span class="text-blush-400">✦</span>
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">UGC NET</span>
+      <span class="text-blush-400">✦</span>
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">Soulful Singing</span>
+      <span class="text-blush-400">✦</span>
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">Bhatkhande</span>
+      <span class="text-blush-400">✦</span>
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">Hindustani Classical</span>
+      <span class="text-blush-400">✦</span>
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">Vocal Performance</span>
+      <span class="text-blush-400">✦</span>
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">Music Education</span>
+      <span class="text-blush-400">✦</span>
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">Raga & Taal</span>
+      <span class="text-blush-400">✦</span>
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">UGC NET</span>
+      <span class="text-blush-400">✦</span>
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">Soulful Singing</span>
+      <span class="text-blush-400">✦</span>
+      <span class="text-ivory-200/50 text-sm tracking-[0.2em] uppercase font-light">Bhatkhande</span>
+      <span class="text-blush-400">✦</span>
+    </div>
+  </div>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="about" class="relative py-24 md:py-32 bg-white overflow-hidden">
+    <!-- Decorative music element -->
+    <div class="absolute top-[20%] right-[-3%] text-blush-100/20 text-[12rem] font-display select-none pointer-events-none leading-none slow-spin">𝄞</div>
+
+    <div class="max-w-6xl mx-auto px-6 md:px-10">
+      <div class="grid md:grid-cols-5 gap-12 md:gap-16 items-start">
+        <!-- Image -->
+        <div class="md:col-span-2">
+  <div class="reveal sticky top-28">
+    <span class="section-num">01 — About</span>
+
+    <div class="mt-4 relative">
+      <div class="img-reveal rounded-[2rem] overflow-hidden bg-[#f8f5f4]">
+        
+        <img 
+          src="Eva2.png" 
+          alt="Eva Mishra performing"
+          class="w-full h-auto object-contain"
+        >
+
+      </div>
+
+      <!-- Swar annotation -->
+      <div class="absolute -bottom-3 -right-3 font-parisienne text-blush-300/70 text-base bg-white px-4 py-1.5 rounded-xl shadow-sm select-none">
+        ♪...where notes become prayers
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- Text -->
+        <div class="md:col-span-3">
+          <h2 class="reveal font-display text-4xl md:text-5xl lg:text-[3.5rem] font-light text-charcoal-800 leading-tight">
+            A life woven with<br>
+            <span class="italic text-rose-500 font-medium">ragas</span> & <span class="italic text-blush-400 font-medium">rhythm</span>
+          </h2>
+          <div class="mt-8 space-y-5">
+            <p class="reveal reveal-delay-1 text-charcoal-400 text-base md:text-lg font-light leading-relaxed">
+              Hello, I'm <span class="text-charcoal-700 font-medium">Eva Mishra</span>, a passionate music enthusiast and aspiring academician from <span class="text-charcoal-600">Kanpur, Uttar Pradesh</span>. Music has always been more than just an art form for me — it is a way of <span class="font-parisienne text-blush-400 text-lg">expressing emotions</span>, preserving culture, and connecting with people on a deeper level.
+            </p>
+            <p class="reveal reveal-delay-2 text-charcoal-400 text-base md:text-lg font-light leading-relaxed">
+              My journey in <span class="text-charcoal-600 font-medium">Hindustani Classical Music</span> has shaped both my personality and my career aspirations. I pursued my higher studies in music from <span class="text-charcoal-600">Bhatkhande Sanskriti Vishwavidyalay, Lucknow</span>, and qualified <span class="text-rose-500 font-medium">UGC NET in Music</span>, which further strengthened my goal of building a career in teaching and research.
+            </p>
+            <p class="reveal reveal-delay-3 text-charcoal-400 text-base md:text-lg font-light leading-relaxed">
+              Apart from academics, I actively share my passion for soulful and classical music through digital platforms and social media.
+            </p>
+            <p class="reveal reveal-delay-4 text-charcoal-400 text-base md:text-lg font-light leading-relaxed">
+              Currently, I am looking for new opportunities in the <span class="text-charcoal-600 font-medium">teaching field</span> where I can contribute my knowledge, dedication, and passion for music while inspiring students through learning and performance.
+            </p>
+          </div>
+
+          <!-- Emphasis Quote -->
+          <div class="reveal reveal-delay-5 mt-10 p-6 bg-blush-50/50 rounded-2xl border border-blush-100/60">
+            <p class="font-script text-2xl md:text-3xl text-blush-400 leading-snug">
+              "Music is the silence between the notes that speaks the loudest"
+            </p>
+            <p class="text-xs text-charcoal-300 mt-3 tracking-wider uppercase">— A Hindustani Classical Philosophy</p>
+          </div>
+
+          <!-- Skill Tags -->
+          <div class="reveal reveal-delay-6 mt-8 flex flex-wrap gap-2">
+            <span class="pill bg-blush-50 text-blush-400">Hindustani Vocal</span>
+            <span class="pill bg-rose-50 text-rose-400">Raga & Taal</span>
+            <span class="pill bg-mauve-50 text-mauve-400">Music Theory</span>
+            <span class="pill bg-peach-50 text-peach-400">Semi-Classical</span>
+            <span class="pill bg-dusty-50 text-dusty-400">Bhatkhande</span>
+            <span class="pill bg-blush-50 text-blush-400">Teaching</span>
+            <span class="pill bg-rose-50 text-rose-400">Performance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EDUCATION SECTION ==================== -->
+  <section id="education" class="py-24 md:py-32 bg-ivory-50 overflow-hidden relative">
+    <!-- Decorative flowing lines -->
+    <svg class="absolute right-0 top-0 w-40 h-full opacity-[0.04] pointer-events-none" viewBox="0 0 100 600">
+      <path d="M80,0 Q60,100 80,200 Q100,300 80,400 Q60,500 80,600" fill="none" stroke="#d64a73" stroke-width="1.5"/>
+      <path d="M60,0 Q40,100 60,200 Q80,300 60,400 Q40,500 60,600" fill="none" stroke="#e84d86" stroke-width="1"/>
+    </svg>
+
+    <div class="max-w-6xl mx-auto px-6 md:px-10">
+      <div class="text-center mb-16 md:mb-20">
+        <span class="section-num reveal">02 — Education</span>
+        <h2 class="reveal reveal-delay-1 font-display text-4xl md:text-5xl lg:text-6xl font-light text-charcoal-800 mt-3">
+          My <span class="italic text-rose-500 font-medium">Musical</span> Journey
+        </h2>
+        <p class="reveal reveal-delay-2 text-charcoal-400 font-light max-w-md mx-auto mt-4">
+          A timeline of academic pursuit in the pursuit of musical excellence
+        </p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="max-w-2xl mx-auto relative">
+        <div class="timeline-line hidden md:block"></div>
+
+        <div class="space-y-8 stagger-children">
+          <!-- Education 1 -->
+          <div class="reveal flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blush-100 border-2 border-blush-300 flex items-center justify-center relative z-10 mt-1">
+              <div class="w-2 h-2 rounded-full bg-blush-400"></div>
+            </div>
+            <div class="flex-1 card-lift p-6 md:p-8 rounded-2xl bg-white border border-blush-100/60 hover:border-blush-200 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <span class="pill bg-blush-50 text-blush-400 text-xs">2018</span>
+                <span class="text-xs text-charcoal-300 font-light">High School</span>
+              </div>
+              <h3 class="font-heading text-lg font-medium text-charcoal-800">The Chintels School</h3>
+              <p class="text-charcoal-400 text-sm mt-1 font-light">High School — Built the foundation of academic and artistic growth in Kanpur.</p>
+            </div>
+          </div>
+
+          <!-- Education 2 -->
+          <div class="reveal flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-rose-100 border-2 border-rose-300 flex items-center justify-center relative z-10 mt-1">
+              <div class="w-2 h-2 rounded-full bg-rose-400"></div>
+            </div>
+            <div class="flex-1 card-lift p-6 md:p-8 rounded-2xl bg-white border border-rose-100/60 hover:border-rose-200 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <span class="pill bg-rose-50 text-rose-400 text-xs">2020</span>
+                <span class="text-xs text-charcoal-300 font-light">Intermediate</span>
+              </div>
+              <h3 class="font-heading text-lg font-medium text-charcoal-800">The Chintels School</h3>
+              <p class="text-charcoal-400 text-sm mt-1 font-light">Intermediate — Continued academic excellence while nurturing the love for classical music.</p>
+            </div>
+          </div>
+
+          <!-- Education 3 -->
+          <div class="reveal flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-mauve-100 border-2 border-mauve-300 flex items-center justify-center relative z-10 mt-1">
+              <div class="w-2 h-2 rounded-full bg-mauve-400"></div>
+            </div>
+            <div class="flex-1 card-lift p-6 md:p-8 rounded-2xl bg-white border border-mauve-100/60 hover:border-mauve-200 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <span class="pill bg-mauve-50 text-mauve-400 text-xs">2020 — 2023</span>
+                <span class="text-xs text-charcoal-300 font-light">Undergraduate</span>
+              </div>
+              <h3 class="font-heading text-lg font-medium text-charcoal-800">Bhatkhande Sanskriti Vishwavidyalay</h3>
+              <p class="text-charcoal-400 text-sm mt-1 font-light">Hindustani Classical Music — Immersed deeply into raga systems, taal structures, and the guru-shishya tradition at India's premier music institution in Lucknow.</p>
+            </div>
+          </div>
+
+          <!-- Education 4 -->
+          <div class="reveal flex gap-5 md:gap-8 items-start">
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-dusty-100 border-2 border-dusty-300 flex items-center justify-center relative z-10 mt-1">
+              <div class="w-2 h-2 rounded-full bg-dusty-400"></div>
+            </div>
+            <div class="flex-1 card-lift p-6 md:p-8 rounded-2xl bg-white border border-dusty-100/60 hover:border-dusty-200 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <span class="pill bg-dusty-50 text-dusty-400 text-xs">2023 — 2025</span>
+                <span class="text-xs text-charcoal-300 font-light">Postgraduate</span>
+              </div>
+              <h3 class="font-heading text-lg font-medium text-charcoal-800">Bhatkhande Sanskriti Vishwavidyalay</h3>
+              <p class="text-charcoal-400 text-sm mt-1 font-light">Hindustani Classical Music (Postgraduate) — Deepening mastery in vocal performance, musicology, and pedagogy. Qualified UGC NET, advancing toward a career in music academia.</p>
+              <!-- UGC NET Badge -->
+              <div class="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-rose-50 rounded-xl border border-rose-100">
+                <span class="text-rose-400">✦</span>
+                <span class="text-sm font-medium text-rose-500">UGC NET Qualified (Music)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PASSION SECTION ==================== -->
+  <section id="passion" class="py-24 md:py-32 bg-white overflow-hidden relative">
+    <div class="absolute bottom-[5%] left-[-2%] text-blush-100/15 text-[14rem] font-display select-none pointer-events-none leading-none slow-spin">𝄞</div>
+    <!-- Floating notes -->
+    <div class="absolute top-[15%] right-[10%] text-blush-200/15 text-3xl float-note-2 select-none pointer-events-none">♫</div>
+    <div class="absolute bottom-[20%] left-[8%] text-mauve-200/15 text-2xl float-note-4 select-none pointer-events-none">♪</div>
+
+    <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+      <div class="text-center mb-16 md:mb-20">
+        <span class="section-num reveal">03 — Passion</span>
+        <h2 class="reveal reveal-delay-1 font-display text-4xl md:text-5xl lg:text-6xl font-light text-charcoal-800 mt-3">
+          The <span class="italic text-rose-500 font-medium">Soul</span> of My Music
+        </h2>
+        <p class="reveal reveal-delay-2 text-charcoal-400 font-light max-w-lg mx-auto mt-4">
+          Where every note carries an emotion, and every raga tells a story
+        </p>
+      </div>
+
+      <!-- Passion Grid -->
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8 stagger-children">
+        <!-- Singing -->
+        <div class="reveal card-lift p-8 md:p-10 rounded-[1.5rem] bg-blush-50/50 border border-blush-100/40 group">
+          <div class="w-14 h-14 rounded-2xl bg-blush-100 flex items-center justify-center mb-6 group-hover:bg-rose-500 transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blush-400 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/></svg>
+          </div>
+          <h3 class="font-heading text-xl font-medium text-charcoal-800">Singing</h3>
+          <p class="text-charcoal-400 text-sm font-light mt-3 leading-relaxed">
+            The voice is my instrument — expressive, raw, and deeply connected to tradition. From khayal to thumri, every genre opens a new emotional landscape.
+          </p>
+        </div>
+
+        <!-- Hindustani Classical -->
+        <div class="reveal card-lift p-8 md:p-10 rounded-[1.5rem] bg-rose-50/40 border border-rose-100/40 group">
+          <div class="w-14 h-14 rounded-2xl bg-rose-100 flex items-center justify-center mb-6 group-hover:bg-rose-500 transition-colors duration-300">
+            <span class="text-2xl text-rose-400 group-hover:text-white transition-colors duration-300 font-display">𝄞</span>
+          </div>
+          <h3 class="font-heading text-xl font-medium text-charcoal-800">Hindustani Classical</h3>
+          <p class="text-charcoal-400 text-sm font-light mt-3 leading-relaxed">
+            Rooted in centuries of raga tradition, I find infinite beauty in theGrammar of swar, the architecture of taal, and the poetry of bandish.
+          </p>
+        </div>
+
+        <!-- Performance -->
+        <div class="reveal card-lift p-8 md:p-10 rounded-[1.5rem] bg-mauve-50/40 border border-mauve-100/40 group">
+          <div class="w-14 h-14 rounded-2xl bg-mauve-100 flex items-center justify-center mb-6 group-hover:bg-mauve-400 transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-mauve-400 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"/></svg>
+          </div>
+          <h3 class="font-heading text-xl font-medium text-charcoal-800">Performance</h3>
+          <p class="text-charcoal-400 text-sm font-light mt-3 leading-relaxed">
+            The stage is where music breathes. Whether at a mehfil or a digital platform, I pour my soul into every performance that touches hearts.
+          </p>
+        </div>
+
+        <!-- Music Education -->
+        <div class="reveal card-lift p-8 md:p-10 rounded-[1.5rem] bg-peach-50/40 border border-peach-100/40 group">
+          <div class="w-14 h-14 rounded-2xl bg-peach-100 flex items-center justify-center mb-6 group-hover:bg-peach-400 transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-peach-400 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a60.624 60.624 0 00-.949-5.191 48.66 48.66 0 00-1.922-.032A48.66 48.66 0 005.868 4.956a60.409 60.409 0 00-1.606 5.19zm15.482 0a60.409 60.409 0 01-1.606-5.19 48.66 48.66 0 00-1.922.032 48.66 48.66 0 00-1.922-.032c-1.135.209-2.254.455-3.354.741m15.482 0a60.409 60.409 0 00-1.606 5.19c-.288.088-.576.176-.864.264m-15.482 0a48.68 48.68 0 018.232 4.41"/></svg>
+          </div>
+          <h3 class="font-heading text-xl font-medium text-charcoal-800">Music Education</h3>
+          <p class="text-charcoal-400 text-sm font-light mt-3 leading-relaxed">
+            Teaching is sharing the light. I aspire to guide students through the intricate beauty of ragas, building both skill and sensitivity.
+          </p>
+        </div>
+
+        <!-- Emotional Connection -->
+        <div class="reveal card-lift p-8 md:p-10 rounded-[1.5rem] bg-dusty-50/40 border border-dusty-100/40 group">
+          <div class="w-14 h-14 rounded-2xl bg-dusty-100 flex items-center justify-center mb-6 group-hover:bg-dusty-400 transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-dusty-400 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+          </div>
+          <h3 class="font-heading text-xl font-medium text-charcoal-800">Emotional Connection</h3>
+          <p class="text-charcoal-400 text-sm font-light mt-3 leading-relaxed">
+            Music isn't just heard — it's felt. Every raga evokes a rasa, every composition carries the weight of emotion passed through generations.
+          </p>
+        </div>
+
+        <!-- Quote Card -->
+        <div class="reveal card-lift p-8 md:p-10 rounded-[1.5rem] bg-gradient-to-br from-blush-50 to-rose-50 border border-blush-100/40 flex flex-col justify-center items-center text-center">
+          <span class="text-3xl mb-4 opacity-30">♪</span>
+          <p class="font-script text-2xl md:text-[1.7rem] text-rose-400 leading-snug">
+            "One raga, infinite emotions — that is the miracle of Hindustani music"
+          </p>
+          <div class="music-divider mt-4">
+            <span>♫</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expanded Passion Quote -->
+      <div class="reveal mt-16 relative">
+        <div class="p-10 md:p-14 rounded-[2rem] bg-ivory-100 border border-ivory-200 text-center relative overflow-hidden">
+          <!-- Sheet music bg -->
+          <div class="absolute inset-0 sheet-music-lines opacity-20 pointer-events-none"></div>
+          <p class="font-script text-3xl md:text-4xl text-blush-400 leading-snug relative z-10">
+            "Music is not what I do — it is who I am"
+          </p>
+          <p class="text-sm text-charcoal-300 mt-6 relative z-10 font-light">— Eva Mishra</p>
+          <!-- Floating notes -->
+          <div class="absolute top-4 left-8 text-blush-200/25 text-xl float-note-1 select-none pointer-events-none">♩</div>
+          <div class="absolute bottom-6 right-12 text-rose-200/20 text-2xl float-note-3 select-none pointer-events-none">♫</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOCIAL SECTION ==================== -->
+  <section id="connect" class="py-24 md:py-32 bg-charcoal-800 overflow-hidden relative">
+    <div class="absolute top-[10%] left-[5%] w-[25vw] h-[25vw] bg-blush-500/8 rounded-full" style="border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; animation: morph-1 12s ease-in-out infinite;"></div>
+    <div class="absolute bottom-[5%] right-[10%] w-[20vw] h-[20vw] bg-mauve-500/8 rounded-full" style="border-radius: 40% 60% 30% 70% / 60% 40% 50% 60%; animation: morph-2 15s ease-in-out infinite;"></div>
+
+    <!-- Floating notes in dark section -->
+    <div class="absolute top-[20%] right-[15%] text-blush-400/10 text-4xl float-note-2 select-none pointer-events-none">♩</div>
+    <div class="absolute bottom-[25%] left-[10%] text-mauve-300/10 text-3xl float-note-5 select-none pointer-events-none">♪</div>
+
+    <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+      <div class="text-center mb-16">
+        <span class="section-num text-charcoal-400 reveal">04 — Connect</span>
+        <h2 class="reveal reveal-delay-1 font-display text-4xl md:text-5xl lg:text-6xl font-light text-ivory-100 mt-3">
+          Find Me <span class="italic text-blush-400 font-medium">Online</span>
+        </h2>
+        <p class="reveal reveal-delay-2 text-charcoal-400 font-light max-w-md mx-auto mt-4">
+          Follow my musical journey across platforms where I share performances, insights, and the magic of classical music
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 stagger-children">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/evex1012" target="_blank" rel="noopener noreferrer" class="reveal card-lift group p-7 md:p-8 rounded-2xl bg-charcoal-700/40 border border-charcoal-600/30 hover:border-blush-400/40 transition-all duration-300 block">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blush-400/20 to-peach-400/20 flex items-center justify-center mb-5 group-hover:from-blush-400 group-hover:to-peach-400 transition-all duration-300">
+            <svg class="w-5 h-5 text-blush-300 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-medium text-ivory-100 group-hover:text-blush-300 transition-colors">Instagram</h3>
+          <p class="text-charcoal-400 text-xs mt-2 font-light">@evex1012</p>
+          <p class="text-charcoal-500 text-xs mt-3 group-hover:text-charcoal-300 transition-colors">Musical moments & behind-the-raga glimpses</p>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@evamishramusic" target="_blank" rel="noopener noreferrer" class="reveal card-lift group p-7 md:p-8 rounded-2xl bg-charcoal-700/40 border border-charcoal-600/30 hover:border-rose-400/40 transition-all duration-300 block">
+          <div class="w-12 h-12 rounded-xl bg-rose-400/15 flex items-center justify-center mb-5 group-hover:bg-rose-500 transition-all duration-300">
+            <svg class="w-5 h-5 text-rose-300 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-medium text-ivory-100 group-hover:text-rose-300 transition-colors">YouTube</h3>
+          <p class="text-charcoal-400 text-xs mt-2 font-light">@evamishramusic</p>
+          <p class="text-charcoal-500 text-xs mt-3 group-hover:text-charcoal-300 transition-colors">Classical performances & vocal explorations</p>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/eva-mishra-bb7ab53a6" target="_blank" rel="noopener noreferrer" class="reveal card-lift group p-7 md:p-8 rounded-2xl bg-charcoal-700/40 border border-charcoal-600/30 hover:border-mauve-400/40 transition-all duration-300 block">
+          <div class="w-12 h-12 rounded-xl bg-mauve-400/15 flex items-center justify-center mb-5 group-hover:bg-mauve-400 transition-all duration-300">
+            <svg class="w-5 h-5 text-mauve-300 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-medium text-ivory-100 group-hover:text-mauve-300 transition-colors">LinkedIn</h3>
+          <p class="text-charcoal-400 text-xs mt-2 font-light">Eva Mishra</p>
+          <p class="text-charcoal-500 text-xs mt-3 group-hover:text-charcoal-300 transition-colors">Professional network & academic journey</p>
+        </a>
+
+        <!-- Gmail -->
+        <a href="mailto:evamishramusic@gmail.com" class="reveal card-lift group p-7 md:p-8 rounded-2xl bg-charcoal-700/40 border border-charcoal-600/30 hover:border-dusty-400/40 transition-all duration-300 block">
+          <div class="w-12 h-12 rounded-xl bg-dusty-400/15 flex items-center justify-center mb-5 group-hover:bg-dusty-400 transition-all duration-300">
+            <svg class="w-5 h-5 text-dusty-300 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.616a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-medium text-ivory-100 group-hover:text-dusty-300 transition-colors">Email</h3>
+          <p class="text-charcoal-400 text-xs mt-2 font-light">evamishramusic@gmail.com</p>
+          <p class="text-charcoal-500 text-xs mt-3 group-hover:text-charcoal-300 transition-colors">Let's connect over music & ideas</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section id="contact" class="py-24 md:py-32 bg-ivory-50 overflow-hidden relative">
+    <div class="absolute bottom-0 left-0 w-[30vw] h-[30vw] bg-blush-50/50 rounded-full" style="border-radius: 50% 50% 40% 60% / 40% 60% 50% 50%; animation: morph-3 18s ease-in-out infinite;"></div>
+    <!-- Floating note -->
+    <div class="absolute top-[15%] right-[8%] text-blush-200/15 text-2xl float-note-1 select-none pointer-events-none">♩</div>
+
+    <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+      <div class="grid md:grid-cols-2 gap-16 md:gap-20">
+        <!-- Left -->
+        <div>
+          <span class="section-num reveal">05 — Contact</span>
+          <h2 class="reveal reveal-delay-1 font-display text-4xl md:text-5xl lg:text-[3.5rem] font-light text-charcoal-800 mt-3 leading-tight">
+            Let's create<br>
+            <span class="italic text-rose-500 font-medium">harmony</span> together
+          </h2>
+          <p class="reveal reveal-delay-2 text-charcoal-400 font-light text-lg mt-6 leading-relaxed max-w-md">
+            Whether you're looking for a music educator, a classical vocalist, or want to collaborate — I'd love to hear from you.
+          </p>
+
+          <div class="reveal reveal-delay-3 mt-10 space-y-5">
+            <a href="mailto:evamishramusic@gmail.com" class="flex items-center gap-3 text-charcoal-600 hover:text-rose-500 transition-colors group">
+              <div class="w-10 h-10 rounded-full bg-blush-50 flex items-center justify-center group-hover:bg-rose-500 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blush-400 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.616a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              </div>
+              <span class="text-sm font-medium link-underline">evamishramusic@gmail.com</span>
+            </a>
+            <a href="https://www.instagram.com/evex1012" target="_blank" class="flex items-center gap-3 text-charcoal-600 hover:text-rose-500 transition-colors group">
+              <div class="w-10 h-10 rounded-full bg-mauve-50 flex items-center justify-center group-hover:bg-mauve-400 transition-colors">
+                <svg class="w-4 h-4 text-mauve-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+              </div>
+              <span class="text-sm font-medium link-underline">@evex1012</span>
+            </a>
+            <div class="flex items-center gap-3 text-charcoal-600">
+              <div class="w-10 h-10 rounded-full bg-peach-50 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-peach-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              </div>
+              <span class="text-sm font-medium">Kanpur, Uttar Pradesh</span>
+            </div>
+          </div>
+
+          <!-- Musical note decoration -->
+          <div class="reveal reveal-delay-5 mt-10 font-script text-2xl text-blush-300/60 select-none">
+            ♪ ...awaiting your melody
+          </div>
+        </div>
+
+        <!-- Right — Contact Form -->
+        <div class="reveal reveal-delay-2">
+          <form id="contactForm" class="space-y-8" onsubmit="return false;">
+            <div class="float-label">
+              <input type="text" id="name" placeholder=" " required>
+              <label for="name">Your Name</label>
+            </div>
+            <div class="float-label">
+              <input type="email" id="email" placeholder=" " required>
+              <label for="email">Your Email</label>
+            </div>
+            <div class="float-label">
+              <textarea id="message" rows="4" placeholder=" " required style="resize: none;"></textarea>
+              <label for="message">Tell me about your vision…</label>
+            </div>
+            <button type="submit" class="group w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-rose-500 text-white rounded-full text-sm font-medium hover:bg-blush-500 transition-all duration-300 hover:shadow-lg hover:shadow-blush-200">
+              Send Message
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+            </button>
+          </form>
+
+          <!-- Success message -->
+          <div id="formSuccess" class="hidden mt-6 p-6 bg-blush-50 rounded-2xl text-center">
+            <span class="text-3xl">♪</span>
+            <p class="font-medium text-charcoal-800 mt-2">Message sent beautifully!</p>
+            <p class="text-sm text-charcoal-400 mt-1">I'll respond within 24 hours ✨</p>
+          </div>
+
+          <!-- Nodemailer integration structure note -->
+          <div class="mt-8 p-4 bg-ivory-100 rounded-xl border border-ivory-200">
+            <p class="text-xs text-charcoal-300 leading-relaxed">
+              <span class="font-medium text-charcoal-400">Backend Ready:</span> Form submission is structured for Nodemailer integration. Connect your preferred backend (Next.js API route / Express) to enable email delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-charcoal-800 py-12 relative overflow-hidden">
+    <!-- Decorative music line -->
+    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blush-400/20 to-transparent"></div>
+
+    <div class="max-w-6xl mx-auto px-6 md:px-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <a href="#hero" class="font-heading text-2xl font-semibold text-ivory-100 hover:text-blush-400 transition-colors">
+            Eva<span class="text-blush-400">.</span>
+          </a>
+          <p class="text-charcoal-400 text-sm mt-1 font-light">Hindustani Classical Vocalist & Music Educator</p>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#about" class="text-sm text-charcoal-400 hover:text-ivory-100 transition-colors">About</a>
+          <a href="#education" class="text-sm text-charcoal-400 hover:text-ivory-100 transition-colors">Education</a>
+          <a href="#passion" class="text-sm text-charcoal-400 hover:text-ivory-100 transition-colors">Passion</a>
+          <a href="#contact" class="text-sm text-charcoal-400 hover:text-ivory-100 transition-colors">Contact</a>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-charcoal-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-charcoal-500">© 2026 Eva Mishra. All rights reserved.</p>
+        <p class="text-xs text-charcoal-500 font-parisienne text-blush-400/50">Crafted with ♪ and devotion</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    // ========== Scroll Reveal ==========
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealElements.forEach(el => observer.observe(el));
+
+    // Also observe img-reveal elements directly
+    document.querySelectorAll('.img-reveal').forEach(el => observer.observe(el));
+
+    // ========== Navbar ==========
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 80) {
+        navbar.style.background = 'rgba(254, 253, 251, 0.92)';
+        navbar.style.backdropFilter = 'blur(20px)';
+        navbar.style.boxShadow = '0 1px 20px rgba(58, 53, 48, 0.04)';
+      } else {
+        navbar.style.background = 'transparent';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.boxShadow = 'none';
+      }
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // ========== Mobile Navigation ==========
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const closeMenu = document.getElementById('closeMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileNav.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    closeMenu.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ========== Marquee ==========
+    const marqueeTrack = document.getElementById('marqueeTrack');
+    let marqueePos = 0;
+    let isHoveringMarquee = false;
+    const stripe = marqueeTrack.innerHTML;
+
+    marqueeTrack.addEventListener('mouseenter', () => { isHoveringMarquee = true; });
+    marqueeTrack.addEventListener('mouseleave', () => { isHoveringMarquee = false; });
+
+    // Clone for seamless loop
+    marqueeTrack.innerHTML += stripe;
+
+    function animateMarquee() {
+      if (!isHoveringMarquee) {
+        marqueePos -= 0.5;
+        if (marqueePos <= -marqueeTrack.scrollWidth / 2) {
+          marqueePos = 0;
+        }
+        marqueeTrack.style.transform = `translateX(${marqueePos}px)`;
+      }
+      requestAnimationFrame(animateMarquee);
+    }
+    animateMarquee();
+
+    // ========== Contact Form ==========
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalHTML = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<span class="inline-flex items-center gap-2"><svg class="animate-spin w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/></svg>Sending…</span>';
+      submitBtn.disabled = true;
+
+      // Structure for Nodemailer backend integration:
+      // POST to /api/contact with { name, email, message }
+      // Backend uses Nodemailer to send email
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+        timestamp: new Date().toISOString()
+      };
+      console.log('Form data ready for Nodemailer:', formData);
+
+      setTimeout(() => {
+        contactForm.style.display = 'none';
+        formSuccess.classList.remove('hidden');
+      }, 1500);
+    });
+
+    // ========== Smooth scroll for anchor links ==========
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ========== Trigger initial reveals for hero ==========
+    setTimeout(() => {
+      document.querySelectorAll('#hero .reveal').forEach(el => {
+        el.classList.add('visible');
+      });
+      document.querySelectorAll('#hero .img-reveal').forEach(el => {
+        el.classList.add('visible');
+      });
+    }, 200);
+
+    // ========== Blob morphing keyframes (for dark section) ==========
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes morph-1 {
+        0%, 100% { border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; }
+        33% { border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%; }
+        66% { border-radius: 50% 50% 40% 60% / 40% 50% 60% 50%; }
+      }
+      @keyframes morph-2 {
+        0%, 100% { border-radius: 40% 60% 30% 70% / 60% 40% 50% 60%; }
+        33% { border-radius: 60% 40% 70% 30% / 50% 60% 30% 70%; }
+        66% { border-radius: 30% 70% 50% 50% / 70% 30% 60% 40%; }
+      }
+      @keyframes morph-3 {
+        0%, 100% { border-radius: 50% 50% 40% 60% / 40% 60% 50% 50%; }
+        50% { border-radius: 40% 60% 60% 40% / 60% 40% 40% 60%; }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
