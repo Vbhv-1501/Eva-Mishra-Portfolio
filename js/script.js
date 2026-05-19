@@ -1,16 +1,95 @@
-// ========== Scroll Reveal ==========
-const revealElements = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+// ========== GSAP Scroll Animations ==========
+gsap.registerPlugin(ScrollTrigger);
+
+// Scroll Progress Staff
+gsap.to('#scrollProgress', {
+  scaleX: 1,
+  ease: 'none',
+  scrollTrigger: {
+    trigger: document.body,
+    start: 'top top',
+    end: 'bottom bottom',
+    scrub: 0.3
+  }
+});
+
+// ========== Dynamic Background Notes per Section ==========
+const musicSymbols = ['♪', '♫', '♩', '♬', '𝄢', '𝄡', '𝄽', '𝄾'];
+const noteColors = ['text-blush-300', 'text-mauve-300', 'text-rose-300', 'text-dusty-300', 'text-peach-300'];
+const sectionsForNotes = document.querySelectorAll('section');
+
+sectionsForNotes.forEach(section => {
+  // Add 7-12 notes per section to fill empty spaces
+  const numNotes = Math.floor(Math.random() * 6) + 7;
+  for (let i = 0; i < numNotes; i++) {
+    const note = document.createElement('div');
+    const symbol = musicSymbols[Math.floor(Math.random() * musicSymbols.length)];
+    const color = noteColors[Math.floor(Math.random() * noteColors.length)];
+    const size = Math.floor(Math.random() * 4) + 2; // 2xl to 5xl
+    
+    note.className = `gsap-note absolute ${color}/30 text-${size}xl select-none pointer-events-none z-0`;
+    note.textContent = symbol;
+    
+    note.style.top = `${Math.random() * 90 + 5}%`;
+    note.style.left = `${Math.random() * 90 + 5}%`;
+    
+    const speed = (Math.random() * 1.5 + 0.5).toFixed(2);
+    note.setAttribute('data-speed', speed);
+    
+    section.appendChild(note);
+  }
+});
+
+// Floating Notes Ambient + Parallax
+document.querySelectorAll('.gsap-note').forEach(note => {
+  const speed = parseFloat(note.getAttribute('data-speed')) || 1;
+  
+  // Ambient float
+  gsap.to(note, {
+    y: 'random(-15, 15)',
+    x: 'random(-10, 10)',
+    rotation: 'random(-10, 10)',
+    duration: 'random(4, 7)',
+    yoyo: true,
+    repeat: -1,
+    ease: 'sine.inOut'
+  });
+
+  // Scroll parallax
+  gsap.to(note, {
+    yPercent: -100 * speed, // move opposite to scroll
+    ease: 'none',
+    scrollTrigger: {
+      trigger: document.body,
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: true
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-revealElements.forEach(el => observer.observe(el));
+});
 
-// Also observe img-reveal elements directly
-document.querySelectorAll('.img-reveal').forEach(el => observer.observe(el));
+// Scroll Reveal with GSAP batch
+ScrollTrigger.batch('.reveal', {
+  onEnter: batch => {
+    gsap.to(batch, {
+      opacity: 1,
+      y: 0,
+      stagger: 0.15,
+      duration: 1.2,
+      ease: 'power3.out',
+      overwrite: 'auto'
+    });
+  },
+  start: 'top 85%'
+});
+
+// Image Reveals
+ScrollTrigger.batch('.img-reveal', {
+  onEnter: batch => {
+    batch.forEach(el => el.classList.add('gsap-visible'));
+  },
+  start: 'top 85%'
+});
 
 // ========== Navbar ==========
 const navbar = document.getElementById('navbar');
@@ -79,9 +158,29 @@ marqueeTrack.addEventListener('mouseleave', () => { isHoveringMarquee = false; }
 // Clone for seamless loop
 marqueeTrack.innerHTML += stripe;
 
+let baseSpeed = 0.5;
+let currentSpeed = baseSpeed;
+let targetSpeed = baseSpeed;
+
+// Increase target speed based on scroll velocity
+ScrollTrigger.create({
+  trigger: document.body,
+  start: "top top",
+  end: "bottom bottom",
+  onUpdate: (self) => {
+    const velocity = Math.abs(self.getVelocity());
+    targetSpeed = baseSpeed + (velocity / 500);
+  }
+});
+
 function animateMarquee() {
   if (!isHoveringMarquee) {
-    marqueePos -= 0.5;
+    // Smoothly decay targetSpeed back to baseSpeed
+    targetSpeed += (baseSpeed - targetSpeed) * 0.05;
+    // Smoothly lerp currentSpeed to targetSpeed
+    currentSpeed += (targetSpeed - currentSpeed) * 0.1;
+    
+    marqueePos -= currentSpeed;
     if (marqueePos <= -marqueeTrack.scrollWidth / 2) {
       marqueePos = 0;
     }
@@ -132,11 +231,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ========== Trigger initial reveals for hero ==========
 setTimeout(() => {
-  document.querySelectorAll('#hero .reveal').forEach(el => {
-    el.classList.add('visible');
+  gsap.to('#hero .reveal', {
+    opacity: 1,
+    y: 0,
+    stagger: 0.15,
+    duration: 1.2,
+    ease: 'power3.out',
+    overwrite: 'auto'
   });
   document.querySelectorAll('#hero .img-reveal').forEach(el => {
-    el.classList.add('visible');
+    el.classList.add('gsap-visible');
   });
 }, 200);
 
@@ -159,3 +263,35 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+// ========== Mouse Trail Effect ==========
+const cursorSymbols = ['♪', '♫', '♩', '♬', '✧'];
+let lastMouseTime = 0;
+
+document.addEventListener('mousemove', (e) => {
+  const now = Date.now();
+  if (now - lastMouseTime < 60) return; // limit emission rate
+  lastMouseTime = now;
+
+  const note = document.createElement('div');
+  const symbol = cursorSymbols[Math.floor(Math.random() * cursorSymbols.length)];
+  note.textContent = symbol;
+  
+  // Offset to avoid blocking the pointer itself
+  note.className = 'fixed text-rose-400/60 text-lg pointer-events-none z-[9999]';
+  note.style.left = `${e.clientX + 10}px`;
+  note.style.top = `${e.clientY + 10}px`;
+  
+  document.body.appendChild(note);
+
+  // Animate and remove
+  gsap.to(note, {
+    y: '-=50',
+    x: 'random(-20, 20)',
+    rotation: 'random(-30, 30)',
+    opacity: 0,
+    duration: 1.2,
+    ease: 'power1.out',
+    onComplete: () => note.remove()
+  });
+});
